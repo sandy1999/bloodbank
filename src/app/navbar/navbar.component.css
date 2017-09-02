@@ -1,3 +1,22 @@
 #hd-main{
     text-align: center;
 }
+.navbar-main>li{
+    display: inline-block;
+}
+.navbar-main{
+    background: #404070;
+}
+.navbar-main>li>a{
+    padding: 15px 25px;
+    color: #FD5E5E;
+    background: #404070;
+}
+.navbar-main>li>a:hover{
+    color: #FD5E5E;
+    background: #35354A;
+}
+.navbar-main>li>a:focus{
+    color: #FD5E5E;
+    background: #35354A;
+}
