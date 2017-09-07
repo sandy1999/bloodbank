@@ -1,0 +1,34 @@
+<section>
+  <div class="container">
+    <h1>About Us</h1>
+    <p>Lipsum text</p>
+    <form [formGroup]="contactForm">
+      <div class="form-group contact-form-group">
+        <label for="name">Name</label>
+        <input class="form-control" formControlName="name" id="name" type="text">
+        <div *ngIf="name.invalid && (name.touched || name.dirty)">
+          <div class="error-validations" *ngIf="name.errors?.required">Name is Required</div>
+          <div class="error-validations" *ngIf="name.errors?.pattern">Name must be only Charachters</div>
+          <div class="error-validations" *ngIf="name.errors?.maxlength">Name too long must be less than {{name.errors.maxlength.requiredLength}}</div>
+        </div>
+      </div>
+      <div class="form-group contact-form-group">
+        <label for="email">Email</label>
+        <input class="form-control" id="email" formControlName="email" type="email">
+        <div *ngIf="email.invalid && (email.touched || email.dirty)">
+          <div class="error-validations" *ngIf="email.errors?.required">Email is required</div>
+          <div class="error-validations" *ngIf="email.errors?.email && !(email.errors?.required) ">Should be of type Email</div>
+        </div>
+      </div>
+      <div class="form-group contact-form-group">
+        <label for="feedBack">FeedBack</label>
+        <textarea id="feedBack" formControlName="feedBack" cols="30" rows="5" class="form-control"></textarea>
+        <div *ngIf="feedBack.invalid && (feedBack.dirty|| feedBack.touched)">
+          <div class="error-validations" *ngIf="feedBack.errors?.required">Feedback is required</div>
+          <div class="error-validations" *ngIf="feedBack.errors?.minlength">Feedback too short must be more than {{feedBack.errors.minlength.requiredLength}}</div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-danger" [disabled]="contactForm.invalid" id="btn-feedback">Send</button>
+    </form>
+  </div>
+</section>
