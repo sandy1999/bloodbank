@@ -9,9 +9,17 @@ form>.contact-form-group>input{
 }
 form>.contact-form-group>textarea{
     /* border:.5px rgba(160, 14, 14, 0.45) solid ; */
-    background: rgba(160, 14, 14, 0.45);
+    background: rgba(160, 14, 14, 0.09);
     outline: none;
-    border-radius: 0;
+    border-radius: 3px;
+    box-shadow: none;
+    color: #2646AD;
+}
+form>.contact-form-group>textarea:focus{
+    /* border:.5px rgba(160, 14, 14, 0.45) solid ; */
+    background: rgba(160, 14, 14, 0.09);
+    outline: none;
+    border-radius: 3px;
     box-shadow: none;
     color: #2646AD;
 }

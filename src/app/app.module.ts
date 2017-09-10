@@ -7,14 +7,23 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
+import { DonorsComponent } from './donors/donors.component';
+import { BanksComponent } from './banks/banks.component';
+
+import { DonorsService } from './services/donors.service';
+import { BanksService } from './services/banks.service';
 
 import { appRoutes } from './routes';
+import { NotFoundComponent } from './not-found/not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     AboutUsComponent,
-    HomeComponent
+    HomeComponent,
+    DonorsComponent,
+    BanksComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +31,10 @@ import { appRoutes } from './routes';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    BanksService,
+    DonorsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
