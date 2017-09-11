@@ -15,6 +15,7 @@ import { BanksService } from './services/banks.service';
 
 import { appRoutes } from './routes';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { DonorsThumbnailComponent } from './donors-thumbnail/donors-thumbnail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HomeComponent,
     DonorsComponent,
     BanksComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    DonorsThumbnailComponent
   ],
   imports: [
     BrowserModule,
