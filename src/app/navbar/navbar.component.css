@@ -20,3 +20,12 @@
     color: #FD5E5E;
     background: #35354A;
 }
+@media only screen and (max-width:768px) {
+    [class*="col-"]{
+        width: 100%;
+    }
+    .navbar-main>li>a{
+        display: inline-block;
+        min-width: 100%;
+    }
+}
