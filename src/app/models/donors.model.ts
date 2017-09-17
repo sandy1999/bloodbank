@@ -7,8 +7,7 @@ export interface BDonors{
 }
 
 export interface Address{
-    streetNumber:number,
-    locality:string,
+    street:string,
     city:string,
     state:string
 } 

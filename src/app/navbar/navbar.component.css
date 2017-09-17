@@ -20,6 +20,9 @@
     color: #FD5E5E;
     background: #35354A;
 }
+.right-navs{
+    float: right;
+}
 @media only screen and (max-width:768px) {
     [class*="col-"]{
         width: 100%;

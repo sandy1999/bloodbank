@@ -1,3 +1,4 @@
+import { RegisterModule } from './register/register.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DonorsComponent } from './donors/donors.component';
 import { BanksComponent } from './banks/banks.component';
@@ -11,5 +12,6 @@ export const appRoutes:Routes =[
     { path: 'aboutus', component: AboutUsComponent },
     { path: 'donors', component: DonorsComponent },
     { path: 'banks', component: BanksComponent },
+    { path: 'register', loadChildren: './register/register.module#RegisterModule' },
     { path: '**', pathMatch: 'full', component: NotFoundComponent },
 ]
