@@ -16,6 +16,8 @@ import { BanksService } from './services/banks.service';
 import { appRoutes } from './routes';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DonorsThumbnailComponent } from './donors-thumbnail/donors-thumbnail.component';
+import { BanksThumbnailComponent } from './banks-thumbnail/banks-thumbnail.component';
+import { InputDirectiveDirective } from './input-directive.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,9 @@ import { DonorsThumbnailComponent } from './donors-thumbnail/donors-thumbnail.co
     DonorsComponent,
     BanksComponent,
     NotFoundComponent,
-    DonorsThumbnailComponent
+    DonorsThumbnailComponent,
+    BanksThumbnailComponent,
+    InputDirectiveDirective
   ],
   imports: [
     BrowserModule,
