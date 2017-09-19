@@ -1,6 +1,6 @@
 <div class="row">
-  <form [formGroup]="registerDonorForm">
-   <div class="form-group">
+  <form [formGroup]="registerBanksForm">
+   <div class="form-group input-banks-group">
      <input type="text" formControlName="name" placeholder="Name" class="form-control input-banks">
      <div *ngIf="name.invalid && (name.dirty || name.touched)">
        <div *ngIf="name.errors?.required" class="errors-banks">Name is Required</div>
@@ -9,7 +9,7 @@
        <div *ngIf="name.errors?.maxlength" class="errors-banks">Name should be less than {{name.errors?.maxlength.requiredLength}}</div>
      </div>
     </div>
-   <div class="form-group">
+   <div class="form-group input-banks-group">
      <input type="text" formControlName="ownerName" placeholder="Owner Name" class="form-control input-banks">
      <div *ngIf="ownerName.invalid && (ownerName.dirty || ownerName.touched)">
        <div *ngIf="ownerName.errors?.required" class="errors-banks">Owner Name is Required</div>
@@ -18,14 +18,14 @@
        <div *ngIf="ownerName.errors?.maxlength" class="errors-banks">Owner Name should be less than {{ownerName.errors?.maxlength.requiredLength}}</div>
      </div>
    </div>
-   <div class="form-group">
+   <div class="form-group input-banks-group">
      <input type="text" placeholder="Type" fromControlName="type" class="form-control input-banks">
      <div *ngIf="type.invalid && (type.dirty || type.touched)">
        <div *ngIf="type.errors?.required" class="errors-banks">Type is Required</div>
      </div>
    </div>
    <div formGroupName="address">
-     <div class="form-group">
+     <div class="form-group input-banks-group">
        <input type="text" placeholder="Street" formControlName="street" class="form-control input-banks">
        <div *ngIf="street.invalid && (street.dirty || street.touched) ">
          <div *ngIf="street.errors?.required" class="errors-banks">Street Name is Required</div>
@@ -33,7 +33,7 @@
          <div *ngIf="street.errors?.maxlength" class="errors-banks">Street Name should be less than {{street.errors?.maxlength.requiredLength}}</div>
        </div>
       </div>
-      <div class="form-group">
+      <div class="form-group input-banks-group">
         <div class="row">
           <div class="col-md-6">
             <input type="text" placeholder="City Name" formControlName="city" class="form-control input-banks">
@@ -54,5 +54,8 @@
         </div>
       </div>
    </div>
+   <div class="form-group input-banks-group">
+     <button type="submit" [disabled]="registerBanksForm.invalid" class="btn btn-danger btn-submit-form">Submit</button>
+    </div>
   </form>
 </div>

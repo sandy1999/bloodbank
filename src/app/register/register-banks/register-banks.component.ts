@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register-banks.component.css']
 })
 export class RegisterBanksComponent implements OnInit {
-public registerDonorForm:FormGroup;
+public registerBanksForm:FormGroup;
   constructor() { }
   ngOnInit() {
-    this.registerDonorForm = new FormGroup({
+    this.registerBanksForm = new FormGroup({
       name:new FormControl('',[
         Validators.required,
         Validators.pattern('[a-zA-Z ]*'),
@@ -44,21 +44,21 @@ public registerDonorForm:FormGroup;
     });
   }
   get name(){
-    return this.registerDonorForm.get('name');
+    return this.registerBanksForm.get('name');
   }
   get ownerName(){
-    return this.registerDonorForm.get('ownerName');
+    return this.registerBanksForm.get('ownerName');
   }
   get type(){
-    return this.registerDonorForm.get('type');
+    return this.registerBanksForm.get('type');
   }
   get street(){
-    return this.registerDonorForm.get('address.street');
+    return this.registerBanksForm.get('address.street');
   }
   get city(){
-    return this.registerDonorForm.get('address.city');
+    return this.registerBanksForm.get('address.city');
   }
   get state(){
-    return this.registerDonorForm.get('address.state');
+    return this.registerBanksForm.get('address.state');
   }
 }
