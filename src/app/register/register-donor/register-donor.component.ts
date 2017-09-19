@@ -73,4 +73,8 @@ export class RegisterDonorComponent implements OnInit {
   get state(){
     return this.registerDonorsForm.get('address.state');
   }
+  registerDonor(){
+    let value =  this.registerDonorsForm.value
+    console.log(value);
+  }
 }
