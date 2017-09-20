@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class BanksComponent implements OnInit {
 
   constructor() { }
-
+  numbers:number[]=[1,1,10,10,1,0];
   ngOnInit() {
   }
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-banks-thumbnail',
+  selector: 'banks-thumbnail',
   templateUrl: './banks-thumbnail.component.html',
   styleUrls: ['./banks-thumbnail.component.css']
 })
