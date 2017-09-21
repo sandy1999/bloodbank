@@ -20,15 +20,18 @@
 }
 .input-donors:focus::-webkit-input-placeholder{
     color: #2646AD;
-    transition: ease-in-out 1.5s;
+    transition: ease-in-out .5s;
+    font-style: italic;
 }
 .input-donors:focus::-ms-input-placeholder{
     color: #2646AD;
-    transition: ease-in-out 1.5s;
+    transition: ease-in-out .5s;
+    font-style: italic;
 }
 .input-donors:focus::-moz-placeholder{
     color: #2646AD;
-    transition: ease-in-out 1.5s;
+    transition: ease-in-out .5s;
+    font-style: italic;
 }
 .input-donors:focus{
     border-bottom-color:#2646AD;

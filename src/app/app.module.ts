@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -17,7 +18,7 @@ import { appRoutes } from './routes';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DonorsThumbnailComponent } from './donors-thumbnail/donors-thumbnail.component';
 import { BanksThumbnailComponent } from './banks-thumbnail/banks-thumbnail.component';
-import { InputDirectiveDirective } from './input-directive.directive';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,17 +30,19 @@ import { InputDirectiveDirective } from './input-directive.directive';
     NotFoundComponent,
     DonorsThumbnailComponent,
     BanksThumbnailComponent,
-    InputDirectiveDirective
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
   providers: [
     BanksService,
-    DonorsService
+    DonorsService,
+    // Http
   ],
   bootstrap: [AppComponent]
 })

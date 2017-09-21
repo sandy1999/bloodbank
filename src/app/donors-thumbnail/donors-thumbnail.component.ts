@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input } from '@angular/core';
 
 @Component({
   selector: 'donors-thumbnail',
@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./donors-thumbnail.component.css']
 })
 export class DonorsThumbnailComponent implements OnInit {
-
+  @Input('donor') donor;
   constructor() { }
 
   ngOnInit() {
+    console.log(this.donor);
   }
 
 }

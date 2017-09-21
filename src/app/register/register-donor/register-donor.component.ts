@@ -26,7 +26,7 @@ export class RegisterDonorComponent implements OnInit {
       ]),
       bloodGroup: new FormControl('',[
         Validators.required,
-        Validators.pattern('[aboABO]{1,2}[+-]')
+        Validators.pattern('[abo]{1,2}[+-]')
       ]),
       contactNumber: new FormControl('',[
         Validators.required,

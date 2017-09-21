@@ -8,19 +8,25 @@
       <div *ngIf="name.errors?.maxlength" class="errors-banks">Name should be less than {{name.errors?.maxlength.requiredLength}}</div>
     </div>
   </div>
-  <div class="form-group input-banks-group">
-    <input type="text" formControlName="ownerName" placeholder="Owner Name" class="form-control input-banks">
-    <div *ngIf="ownerName.invalid && (ownerName.dirty || ownerName.touched)">
-      <div *ngIf="ownerName.errors?.required" class="errors-banks">Owner Name is Required</div>
-      <div *ngIf="ownerName.errors?.pattern" class="errors-banks">Owner Name should be Alphabets</div>
-      <div *ngIf="ownerName.errors?.minlength" class="errors-banks">Owner Name should be more than {{ownerName.errors?.minlength.requiredLength}}</div>
-      <div *ngIf="ownerName.errors?.maxlength" class="errors-banks">Owner Name should be less than {{ownerName.errors?.maxlength.requiredLength}}</div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group input-banks-group">
+        <input type="text" formControlName="ownerName" placeholder="Owner Name" class="form-control input-banks">
+        <div *ngIf="ownerName.invalid && (ownerName.dirty || ownerName.touched)">
+          <div *ngIf="ownerName.errors?.required" class="errors-banks">Owner Name is Required</div>
+          <div *ngIf="ownerName.errors?.pattern" class="errors-banks">Owner Name should be Alphabets</div>
+          <div *ngIf="ownerName.errors?.minlength" class="errors-banks">Owner Name should be more than {{ownerName.errors?.minlength.requiredLength}}</div>
+          <div *ngIf="ownerName.errors?.maxlength" class="errors-banks">Owner Name should be less than {{ownerName.errors?.maxlength.requiredLength}}</div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="form-group input-banks-group">
-    <input type="text" placeholder="Type" fromControlName="type" class="form-control input-banks">
-    <div *ngIf="type.invalid && (type.dirty || type.touched)">
-      <div *ngIf="type.errors?.required" class="errors-banks">Type is Required</div>
+    <div class="col-md-6">
+      <div class="form-group input-banks-group">
+        <input type="text" placeholder="Type" fromControlName="type" class="form-control input-banks">
+        <div *ngIf="type.invalid && (type.dirty || type.touched)">
+          <div *ngIf="type.errors?.required" class="errors-banks">Type is Required</div>
+        </div>
+      </div>
     </div>
   </div>
   <div formGroupName="address">

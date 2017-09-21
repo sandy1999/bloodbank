@@ -21,7 +21,7 @@
     </div>
     <div class="col-md-4">
       <div class="form-group input-donor-group">
-        <input type="text" formControlName="bloodGroup" placeholder="Blood Group" class="form-control input-donors" appInputDirective>
+        <input type="text" formControlName="bloodGroup" placeholder="Blood Group (small letters)" class="form-control input-donors" [appInputFormat]>
         <div *ngIf="bloodGroup.invalid && (bloodGroup.dirty || bloodGroup.touched)">
           <div *ngIf="bloodGroup.errors?.required" class="errors-donors">Blood Group is Required</div>
           <div *ngIf="bloodGroup.errors?.pattern" class="errors-donors">Blood Group is not Valid</div>

@@ -7,6 +7,7 @@ import { RegisterBanksComponent } from './register-banks/register-banks.componen
 import { RouterModule } from "@angular/router";
 import { registerRoutes } from './register-routes';
 import { RegisterComponent } from './register.component';
+import { InputFormatDirective } from './input-format.directive';
 
 
 @NgModule({
@@ -14,11 +15,13 @@ import { RegisterComponent } from './register.component';
     CommonModule,
     RouterModule.forChild(registerRoutes),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   declarations: [
     RegisterDonorComponent, 
-    RegisterBanksComponent, RegisterComponent,
+    RegisterBanksComponent, 
+    RegisterComponent, 
+    InputFormatDirective,
   ],
 })
 export class RegisterModule { }
