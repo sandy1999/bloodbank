@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'banks-thumbnail',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banks-thumbnail.component.css']
 })
 export class BanksThumbnailComponent implements OnInit {
-
+  @Input('bank-details') bank;
   constructor() { }
 
   ngOnInit() {

@@ -1,7 +1,7 @@
 <div class="well hoverwell center donors-thumbnail">
-  <h3>Name:Sanidhya Mangal</h3>
-  <h4>Age:19</h4>
-  <h4>BloodGroup:B+</h4>
-  <h4>ContactNumber:98xxxxxxxx</h4>
-  <h4>Address:</h4>
+  <h3>Name:{{donor.name}}</h3>
+  <h4>Age:{{donor.age}}</h4>
+  <h4>BloodGroup:{{donor.bloodgroup | uppercase}}</h4>
+  <h4>ContactNumber:{{donor.contactnumber}}</h4>
+  <h4>Address:{{donor.street}} {{donor.city}} , {{donor.state}}</h4>
 </div>

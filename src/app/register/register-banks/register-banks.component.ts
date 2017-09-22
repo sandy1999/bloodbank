@@ -61,4 +61,8 @@ public registerBanksForm:FormGroup;
   get state(){
     return this.registerBanksForm.get('address.state');
   }
+  registerBanks(){
+    let registerFormValue = this.registerBanksForm.value;
+    console.log(registerFormValue);
+  }
 }

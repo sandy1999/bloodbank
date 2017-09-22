@@ -10,7 +10,6 @@ export class DonorsThumbnailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.donor);
   }
 
 }

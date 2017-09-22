@@ -4,8 +4,11 @@
       <h1>404'd</h1>
       <h2>Page Not Found</h2>
       <h3 class="router-url"> 
-        <em>
+        <em *ngIf="router_url != null" >
           {{router_url}} dosen't exsist in our domain space
+        </em>
+        <em *ngIf="router_url == null">
+          An Internal Server Error Occured Try again after some time  
         </em> 
       </h3>
     </div>  

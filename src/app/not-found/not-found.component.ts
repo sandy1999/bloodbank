@@ -16,6 +16,9 @@ export class NotFoundComponent implements OnInit {
   router_url  = "https://url"+this.route_path
 
   ngOnInit() {
+    if(this.route_path === "/**"){
+      this.router_url=null;
+    }
   }
 
 }
