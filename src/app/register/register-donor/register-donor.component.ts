@@ -31,6 +31,7 @@ export class RegisterDonorComponent implements OnInit {
       contactNumber: new FormControl('',[
         Validators.required,
         Validators.pattern('[789][0-9]*'),
+        Validators.minLength(10),
         Validators.maxLength(10)
       ]),
       address:new FormGroup({
@@ -74,7 +75,7 @@ export class RegisterDonorComponent implements OnInit {
     return this.registerDonorsForm.get('address.state');
   }
   registerDonor(){
-    let value =  this.registerDonorsForm.value
+    let value =  this.registerDonorsForm.value;
     console.log(value);
   }
 }

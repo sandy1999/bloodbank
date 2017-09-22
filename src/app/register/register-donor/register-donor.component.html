@@ -33,7 +33,7 @@
         <input type="text" formControlName="contactNumber" placeholder="Contact Number" class="form-control input-donors">
         <div *ngIf="contactNumber.invalid && (contactNumber.dirty || contactNumber.touched)">
           <div *ngIf="contactNumber.errors?.required" class="errors-donors">Contact Number is Required</div>
-          <div *ngIf="contactNumber.errors?.pattern" class="errors-donors">Contact Number should Valid</div>
+          <div *ngIf="contactNumber.errors?.pattern || contactNumber.errors?.minlength" class="errors-donors">Contact Number should Valid</div>
           <div *ngIf="contactNumber.errors?.maxlength" class="errors-donors">Contact Number should be less than 10 Digits</div>
         </div>
       </div>
