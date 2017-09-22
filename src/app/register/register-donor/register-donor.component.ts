@@ -1,5 +1,9 @@
+import { Router } from '@angular/router';
+import { Response } from '@angular/http';
+import { DonorsService } from './../../services/donors.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import 'rxjs';
 
 @Component({
   selector: 'register-donor',
@@ -9,7 +13,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class RegisterDonorComponent implements OnInit {
 
   public registerDonorsForm:FormGroup;
-  constructor() { }
+  constructor( private _donorService:DonorsService , private router:Router) { }
 
   ngOnInit() {
     this.registerDonorsForm = new FormGroup({
@@ -76,6 +80,12 @@ export class RegisterDonorComponent implements OnInit {
   }
   registerDonor(){
     let value =  this.registerDonorsForm.value;
-    console.log(value);
+    this._donorService.registerDonor(value)
+    .subscribe((res)=>{
+      console.log(res);
+      if(res.id != null ){
+        this.router.navigate(['/donors']);
+      }
+    });
   }
 }

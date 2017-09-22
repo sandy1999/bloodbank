@@ -1,3 +1,6 @@
+import { Router } from '@angular/router';
+import { Response } from '@angular/http';
+import { BanksService } from './../../services/banks.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterBanksComponent implements OnInit {
 public registerBanksForm:FormGroup;
-  constructor() { }
+  constructor(private _bankService:BanksService , private router:Router ) { }
   ngOnInit() {
     this.registerBanksForm = new FormGroup({
       name:new FormControl('',[
@@ -63,6 +66,11 @@ public registerBanksForm:FormGroup;
   }
   registerBanks(){
     let registerFormValue = this.registerBanksForm.value;
-    console.log(registerFormValue);
+    this._bankService.registerBank(registerFormValue)
+    .subscribe((res)=>{
+      if(res.id != null ){
+        this.router.navigate(['/banks']);
+      }
+    });
   }
 }

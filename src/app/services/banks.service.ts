@@ -1,3 +1,4 @@
+import { Headers } from '@angular/http';
 import { Http , Response } from '@angular/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
@@ -21,7 +22,11 @@ export class BanksService {
       "city":bank_details.address.city,
       "state":bank_details.address.state
     };
-    return this._http.post(this._url+"/banks", JSON.stringify(bank_details))
+    let _header = new Headers();
+    _header.append("Content-Type","application/json");
+    // _header.append("Access-Control-Allow-Headers","Content-Type");
+    // console.log(bank_details);
+    return this._http.post(this._url+"/banks",bank_details,{headers:_header})
     .map((response:Response)=>response.json());
   }
 }
