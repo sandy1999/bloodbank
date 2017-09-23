@@ -86,6 +86,9 @@ export class RegisterDonorComponent implements OnInit {
       if(res.id != null ){
         this.router.navigate(['/donors']);
       }
+    },(error:Response)=>{
+      window.confirm('You are not connected to Internet so can\'t Process your request try again after some time');
+      this.router.navigate(['/cantpost']);
     });
   }
 }
