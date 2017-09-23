@@ -1,4 +1,4 @@
-<form [formGroup]="registerBanksForm" (ngSubmit)="registerBanks()" >
+<form [formGroup]="registerBanksForm" (ngSubmit)="registerBanks()" autocomplete="off">
   <div class="form-group input-banks-group">
     <input type="text" formControlName="name" placeholder="Name" class="form-control input-banks">
     <div *ngIf="name.invalid && (name.dirty || name.touched)">
