@@ -19,6 +19,10 @@ export class NotFoundComponent implements OnInit {
     if(this.route_path === "/**"){
       this.router_url=null;
     }
+
+    if(this.route_path === "/cantpost"){
+      this.router_url = "cantpost";
+    }
   }
 
 }
