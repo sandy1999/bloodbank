@@ -45,6 +45,12 @@ export class AboutUsComponent implements OnInit {
       if(res.id != null){
         window.confirm('We have sent your query, Will answer you Asap');
       }
+    },(error:Response)=>{
+      if(error.status==404){
+        window.confirm('Sorry we cant Process right now please try again later')
+      }else{
+        window.confirm('Cant Process your request right now maybe connection error');
+      }
     });
     this.router.navigate(['']);
   }
