@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { ContactService } from './../services/contact.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl,FormGroup,Validators } from '@angular/forms';
 
@@ -8,7 +10,7 @@ import { FormControl,FormGroup,Validators } from '@angular/forms';
 })
 export class AboutUsComponent implements OnInit {
   contactForm:FormGroup;
-  constructor() { }
+  constructor(private _contactService:ContactService, private router:Router) { }
 
   get name(){
     return this.contactForm.get('name');
@@ -37,4 +39,13 @@ export class AboutUsComponent implements OnInit {
     });
   }
 
+  sendFeedback(){
+    let feedbackValue = this.contactForm.value;
+    this._contactService.submitFeedback(feedbackValue).subscribe(res=>{
+      if(res.id != null){
+        window.confirm('We have sent your query, Will answer you Asap');
+      }
+    });
+    this.router.navigate(['']);
+  }
 }

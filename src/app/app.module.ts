@@ -13,6 +13,7 @@ import { BanksComponent } from './banks/banks.component';
 
 import { DonorsService } from './services/donors.service';
 import { BanksService } from './services/banks.service';
+import { ContactService } from './services/contact.service';
 
 import { appRoutes } from './routes';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -42,7 +43,7 @@ import { FooterComponent } from './footer/footer.component';
   providers: [
     BanksService,
     DonorsService,
-    // Http
+    ContactService
   ],
   bootstrap: [AppComponent]
 })
