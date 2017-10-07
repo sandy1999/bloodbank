@@ -27,8 +27,13 @@
     [class*="col-"]{
         width: 100%;
     }
-    .navbar-main>li>a{
-        display: inline-block;
+}
+@media only screen and (max-width:425px) {
+    .right-navs{
+        float: none;
+    }
+    .navbar-main>li{
+        display: block;
         min-width: 100%;
     }
 }
